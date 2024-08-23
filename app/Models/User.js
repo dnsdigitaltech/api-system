@@ -21,6 +21,13 @@ class User extends Model {
     })
   }
 
+  client(){
+    return this.hasOne('App/Models/Client')
+  }
+
+  typeUser(){
+    return this.belongsTo('App/Models/TypeUser')
+  }
   /**
    * A relationship on tokens is required for auth to
    * work. Since features like `refreshTokens` or
