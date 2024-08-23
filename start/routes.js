@@ -6,6 +6,9 @@ Route.get('/', () => {
   return { status: 'Online' }
 })
 
+Route.post('/sessions', 'SessionController.create')
+Route.put('/sessions', 'SessionController.refreshToken')
+
 Route.resource('users', 'UserController').apiOnly().validator(new Map([
   [['users.store'], ['User']],[['users.update'], ['User']]
 ]))
