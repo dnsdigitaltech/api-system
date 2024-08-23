@@ -5,7 +5,7 @@ const Model = use('Model')
 
 class Training extends Model {
     exercises(){
-        return this.belongsToMany('App/Models/Training')
+        return this.belongsToMany('App/Models/Exercise')
     }
 }
 
