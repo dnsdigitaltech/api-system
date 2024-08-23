@@ -8,7 +8,8 @@ class UserController {
     
     async show({ params }) {
         const user = await User.findOrFail(params.id)
-        return user
+        await user.load('typeUser')
+        return user        
     }
 
     async store({ request }) {

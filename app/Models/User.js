@@ -21,11 +21,11 @@ class User extends Model {
     })
   }
 
-  client(){
+  client () {
     return this.hasOne('App/Models/Client')
   }
 
-  typeUser(){
+  typeUser () {
     return this.belongsTo('App/Models/TypeUser')
   }
   /**
