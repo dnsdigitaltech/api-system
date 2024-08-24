@@ -28,3 +28,11 @@ Route.resource('trainings', 'TrainingController').apiOnly().validator(new Map([
 Route.resource('products', 'ProductController').apiOnly().validator(new Map([
   [['products.store'], ['Product']],[['products.update'], ['Product']]
 ])).middleware('auth:jwt')
+
+Route.resource('permissions', 'PermissionController').apiOnly().validator(new Map([
+  [['permissions.store'], ['Permission']],[['permissions.update'], ['Permission']]
+])).middleware('auth:jwt')
+
+Route.resource('roles', 'RoleController').apiOnly().validator(new Map([
+  [['roles.store'], ['Role']],[['roles.update'], ['Role']]
+])).middleware('auth:jwt')
